@@ -15,6 +15,13 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
+    if data == "note":
+        await query.message.edit_text(
+            text = f"<b>○ Bot's Developer🧑‍💻 : <a href='https://t.me/xo_code'>This Person</a>\n○ Bot's Owner🤖 : @VICIOUSSKULL\n○ Bot's Updates Channel📢 : https://t.me/NEW_RELEASED_M0VIEZ",
+            disable_web_page_preview = True,
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
                     ]
                 ]
